@@ -18,8 +18,8 @@ class URLMap(db.Model):
                 setattr(self, MODEL_FIELDS[field], data[field])
 
     def to_dict(link):
-        return dict(
-            url=link.original,
-            short_link=url_for('redirect_custom_id',
-                               custom_id=link.short, _external=True)
-        )
+        return {
+            'url': link.original,
+            'short_link': url_for('redirect_custom_id',
+                                  custom_id=link.short, _external=True)
+        }

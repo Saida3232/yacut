@@ -1,5 +1,6 @@
-import pytest
 from http import HTTPStatus
+
+import pytest
 
 from yacut.models import URLMap
 
